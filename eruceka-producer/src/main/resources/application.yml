@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: producer
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8888/eureka/
+  instance: 
+    prefer-ip-address: true #将自己的ip地址注册到Eureka服务中
+    ip-address: 127.0.0.1
+

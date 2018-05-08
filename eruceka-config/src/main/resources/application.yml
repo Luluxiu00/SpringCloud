@@ -1,0 +1,33 @@
+server:
+  port: 8070
+  
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Luluxiu00/itcast-microservice-config-server.git
+          #username: luluxiu00
+          #password: yan31bin
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    
+    
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8888/eureka/
+  instance: 
+    prefer-ip-address: true #将自己的ip地址注册到Eureka服务中
+    ipAddress: 127.0.0.1
+    
+management:
+  security:
+    enabled: false  #是否开启actuator安全认证

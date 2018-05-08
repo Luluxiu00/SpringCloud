@@ -1,0 +1,15 @@
+server:
+  port: 8888
+eureka:
+  client:
+    fetchRegistry: false
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/
+security:
+  basic:
+    enabled: true
+  user:
+    name: root
+    password: root
+
